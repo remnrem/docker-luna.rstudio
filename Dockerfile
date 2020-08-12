@@ -16,8 +16,8 @@ RUN apt-get update \
  && make && make install
 
 RUN cd /build \
- && git clone https://remnrem@bitbucket.org/remnrem/luna-base.git \
- && git clone https://remnrem@bitbucket.org/remnrem/luna.git \
+ && git clone https://github.com/remnrem/luna-base.git \
+ && git clone https://github.com/remnrem/luna.git \
  && cd luna-base \
  && make FFTW=/build/fftw3 -j 2 \
  && ln -s /build/luna-base/luna /usr/local/bin/luna \
