@@ -20,8 +20,9 @@ RUN cd /build \
  && R -e "install.packages('git2r', repos='http://cran.rstudio.com/')" \
  && R -e "install.packages('plotrix', repos='http://cran.rstudio.com/')" \
  && R -e "install.packages('geosphere', repos='http://cran.rstudio.com/')" \
+ && R -e "install.packages('matlab', repos='http://cran.rstudio.com/')" \
  && R CMD build luna \
- && LUNA_BASE=/build/luna-base R CMD INSTALL luna_0.24.1.tar.gz \
+ && LUNA_BASE=/build/luna-base R CMD INSTALL luna_0.25.5.tar.gz \
  && mkdir /home/rstudio/data \
  && mkdir /home/rstudio/data1 \
  && mkdir /home/rstudio/data2 \
